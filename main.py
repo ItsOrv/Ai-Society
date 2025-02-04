@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 # تعریف محیط
 grid_size = 10
@@ -16,12 +17,14 @@ class Robot:
         self.x = x
         self.y = y
         self.energy = 100
+        self.path = [(x, y)]  # مسیر حرکت ربات
 
     def move(self, new_x, new_y):
         if 0 <= new_x < grid_size and 0 <= new_y < grid_size:
             self.x = new_x
             self.y = new_y
             self.energy -= 1  # کاهش انرژی با هر حرکت
+            self.path.append((new_x, new_y))  # اضافه کردن موقعیت جدید به مسیر
 
     def sense_resources(self, environment):
         resources = []
@@ -65,3 +68,27 @@ for t in range(time_steps):
     if all(robot.energy <= 0 for robot in robots):
         print("All robots are out of energy!")
         break
+
+# نمایش گراف
+plt.figure(figsize=(8, 8))
+plt.title("Robot Movement Visualization")
+
+# نمایش منابع انرژی
+for pos in resource_positions:
+    plt.plot(pos[1], pos[0], 'go', markersize=10, label='Resource' if pos[0] == resource_positions[0][0] else "")
+
+# نمایش مسیر حرکت ربات‌ها
+colors = ['r', 'b']  # رنگ‌های مختلف برای ربات‌ها
+for i, robot in enumerate(robots):
+    path = np.array(robot.path)
+    plt.plot(path[:, 1], path[:, 0], marker='o', color=colors[i], label=f'Robot {i+1}')
+    plt.plot(robot.path[-1][1], robot.path[-1][0], marker='X', color=colors[i], markersize=10)  # موقعیت نهایی
+
+# تنظیمات گراف
+plt.xlabel("X Coordinate")
+plt.ylabel("Y Coordinate")
+plt.xticks(np.arange(0, grid_size, 1))
+plt.yticks(np.arange(0, grid_size, 1))
+plt.grid(True)
+plt.legend()
+plt.show()
