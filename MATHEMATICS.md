@@ -16,7 +16,7 @@ $$
 a^{(l)} = \sigma(z^{(l)})
 $$
 
-where $W^{(l)} \in \mathbb{R}^{n_{in} \times n_{out}}$ is the weight matrix, $b^{(l)} \in \mathbb{R}^{n_{out}}$ is the bias vector, and $\sigma$ is the activation function.
+where $W^{(l)} \in \mathbb{R}^{n_{\text{in}} \times n_{\text{out}}}$ is the weight matrix, $b^{(l)} \in \mathbb{R}^{n_{\text{out}}}$ is the bias vector, and $\sigma$ is the activation function.
 
 ### Activation Functions
 
@@ -178,10 +178,10 @@ where $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\epsilon = 10^{-8}$, and $\alpha$ is 
 
 He initialization for ReLU (uniform distribution):
 $$
-W_{ij} \sim \mathcal{U}\left(-\sqrt{\frac{6}{n_{in}}}, \sqrt{\frac{6}{n_{in}}}\right)
+W_{ij} \sim \mathcal{U}\left(-\sqrt{\frac{6}{n_{\text{in}}}}, \sqrt{\frac{6}{n_{\text{in}}}}\right)
 $$
 
-where $n_{in}$ is the number of input units.
+where $n_{\text{in}}$ is the number of input units.
 
 ## PPO Algorithm
 
@@ -217,11 +217,13 @@ $$
 ### Generalized Advantage Estimation (GAE)
 
 Temporal difference error:
+
 $$
 \delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
 $$
 
 GAE advantage:
+
 $$
 \hat{A}_t = \sum_{l=0}^{\infty} (\gamma \lambda)^l \delta_{t+l}
 $$
@@ -307,10 +309,10 @@ s_t = [p_t, L_t, E_t, d_{min,t}]
 $$
 
 where:
-- $p_t \in [0,1]^3$: normalized position $(x/grid\_size, y/grid\_size, z/grid\_size)$
+- $p_t \in [0,1]^3$: normalized position $(x/\text{grid\_size}, y/\text{grid\_size}, z/\text{grid\_size})$
 - $L_t \in \mathbb{R}^{27}$: local 3×3×3 grid view around agent position
 - $E_t \in [0,1]$: normalized energy level $E_t / 100$
-- $d_{min,t} \in [0,1]$: normalized minimum distance to nearest resource
+- $d_{\text{min},t} \in [0,1]$: normalized minimum distance to nearest resource
 
 ### Action Space
 
@@ -322,8 +324,9 @@ $$
 ### State Transition
 
 Position update:
+
 $$
-p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, grid\_size-1]^3)
+p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size}-1]^3)
 $$
 
 where $\alpha = 1.5$ is the movement scale.
@@ -335,26 +338,28 @@ R_t = R_{resource} \cdot \mathbb{I}(\text{resource}) + R_{obstacle} \cdot \mathb
 $$
 
 where:
-- $R_{resource} = 25$: reward for collecting resource
-- $R_{obstacle} = -15$: penalty for hitting obstacle
-- $R_{proximity} = 0.1$: proximity reward coefficient
-- $R_{move} = 0.1$: movement penalty per step
-- $R_{energy} = 0$: energy decay is handled separately
+- $R_{\text{resource}} = 25$: reward for collecting resource
+- $R_{\text{obstacle}} = -15$: penalty for hitting obstacle
+- $R_{\text{proximity}} = 0.1$: proximity reward coefficient
+- $R_{\text{move}} = 0.1$: movement penalty per step
+- $R_{\text{energy}} = 0$: energy decay is handled separately
 
 Terminal penalty:
+
 $$
-R_{terminal} = -10 \quad \text{if } E_t \leq 0
+R_{\text{terminal}} = -10 \quad \text{if } E_t \leq 0
 $$
 
 ### Energy Dynamics
 
 $$
-E_{t+1} = E_t - \beta + R_{resource} \cdot \mathbb{I}(\text{resource\_collected}) + R_{obstacle} \cdot \mathbb{I}(\text{obstacle\_hit})
+E_{t+1} = E_t - \beta + R_{\text{resource}} \cdot \mathbb{I}(\text{resource\_collected}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle\_hit})
 $$
 
 where $\beta = 1.0$ is the energy decay rate per step.
 
 Terminal condition:
+
 $$
 \text{done} = \begin{cases} \text{True} & \text{if } E_{t+1} \leq 0 \\ \text{False} & \text{otherwise} \end{cases}
 $$
@@ -362,11 +367,12 @@ $$
 ### Resource Respawn
 
 Resources respawn probabilistically:
+
 $$
-\text{respawn} \sim \text{Bernoulli}(p_{respawn})
+\text{respawn} \sim \text{Bernoulli}(p_{\text{respawn}})
 $$
 
-where $p_{respawn} = 0.05$ is the respawn rate per step, and respawn occurs only if the number of resources is below the initial count.
+where $p_{\text{respawn}} = 0.05$ is the respawn rate per step, and respawn occurs only if the number of resources is below the initial count.
 
 ## Communication
 
@@ -382,13 +388,15 @@ where $||\cdot||_2$ is the Euclidean distance, $\text{range\_limit}$ depends on 
 ### Cooperation History
 
 For mixed cooperation mode, cooperation score:
+
 $$
-\text{score}_j = \frac{\text{helpful\_actions}_j \cdot \text{decay}^{t - t_{last}}}{\text{total\_interactions}_j \cdot \text{decay}^{t - t_{last}}}
+\text{score}_j = \frac{\text{helpful\_actions}_j \cdot \text{decay}^{t - t_{\text{last}}}}{\text{total\_interactions}_j \cdot \text{decay}^{t - t_{\text{last}}}}
 $$
 
 where $\text{decay} = 0.95$ is the decay factor and $j$ is the other agent ID.
 
 Cooperation decision:
+
 $$
 \text{cooperate} = \begin{cases} \text{True} & \text{if } \text{score}_j \geq 0.5 \\ \text{False} & \text{otherwise} \end{cases}
 $$
@@ -398,13 +406,15 @@ $$
 ### Log Probability Clipping
 
 Log probability ratios are clipped before exponentiation:
+
 $$
-\log r_t = \text{clip}(\log \pi_\theta(a_t|s_t) - \log \pi_{\theta_{old}}(a_t|s_t), -10, 10)
+\log r_t = \text{clip}(\log \pi_\theta(a_t|s_t) - \log \pi_{\theta_{\text{old}}}(a_t|s_t), -10, 10)
 $$
 
 ### Variance Regularization
 
 Variance terms include epsilon for numerical stability:
+
 $$
 \sigma^2 \leftarrow \sigma^2 + 10^{-8}
 $$
@@ -412,6 +422,7 @@ $$
 ### Advantage Normalization
 
 Advantages are normalized to zero mean and unit variance:
+
 $$
 \hat{A}_t \leftarrow \frac{\hat{A}_t - \mu(\hat{A})}{\sigma(\hat{A}) + 10^{-8}}
 $$
