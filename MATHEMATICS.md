@@ -305,11 +305,11 @@ where $\text{max\_norm} = 0.5$ is the maximum gradient norm.
 
 The observation vector:
 $$
-s_t = [p_t, L_t, E_t, d_{min,t}]
+s_t = [p_t, L_t, E_t, d_{\text{min},t}]
 $$
 
 where:
-- $p_t \in [0,1]^3$: normalized position $(x/\text{grid\_size}, y/\text{grid\_size}, z/\text{grid\_size})$
+- $p_t \in [0,1]^3$: normalized position $(x/\text{grid\_size}, y/\text{grid\_size}, z/\text{grid\_size})$ where $\text{grid\_size}$ is the environment grid size
 - $L_t \in \mathbb{R}^{27}$: local 3×3×3 grid view around agent position
 - $E_t \in [0,1]$: normalized energy level $E_t / 100$
 - $d_{\text{min},t} \in [0,1]$: normalized minimum distance to nearest resource
@@ -326,7 +326,7 @@ $$
 Position update:
 
 $$
-p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size}-1]^3)
+p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size} - 1]^3)
 $$
 
 where $\alpha = 1.5$ is the movement scale.
@@ -334,7 +334,7 @@ where $\alpha = 1.5$ is the movement scale.
 ### Reward Function
 
 $$
-R_t = R_{resource} \cdot \mathbb{I}(\text{resource}) + R_{obstacle} \cdot \mathbb{I}(\text{obstacle}) + R_{proximity} \cdot \frac{1}{d_{min} + 1} - R_{move} - R_{energy}
+R_t = R_{\text{resource}} \cdot \mathbb{I}(\text{resource}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle}) + R_{\text{proximity}} \cdot \frac{1}{d_{\text{min}} + 1} - R_{\text{move}} - R_{\text{energy}}
 $$
 
 where:
@@ -353,7 +353,7 @@ $$
 ### Energy Dynamics
 
 $$
-E_{t+1} = E_t - \beta + R_{\text{resource}} \cdot \mathbb{I}(\text{resource\_collected}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle\_hit})
+E_{t+1} = E_t - \beta + R_{\text{resource}} \cdot \mathbb{I}(\text{resource collected}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle hit})
 $$
 
 where $\beta = 1.0$ is the energy decay rate per step.
