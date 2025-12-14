@@ -409,8 +409,9 @@ where $p_{\text{respawn}} = 0.05$ is the respawn rate per step, and respawn occu
 ### Message Range
 
 A message is received if:
+
 $$
-\left\|p_{\text{sender}} - p_{\text{receiver}}\right\|_2 \leq \text{range\_limit} \quad \text{AND} \quad (t_{\text{current}} - t_{\text{sent}}) \leq \text{TTL}
+\left\|p_{\text{sender}} - p_{\text{receiver}}\right\|_2 \leq \mathrm{range\_limit} \quad \text{AND} \quad (t_{\text{current}} - t_{\text{sent}}) \leq \text{TTL}
 $$
 
 where $\left\|\cdot\right\|_2$ is the Euclidean distance, $\mathrm{range\_limit}$ depends on message type, and $\mathrm{TTL} = 50$ is the time-to-live.
