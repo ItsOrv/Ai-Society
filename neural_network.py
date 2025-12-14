@@ -29,7 +29,7 @@ class ActivationFunction:
     
     @staticmethod
     def sigmoid(x: np.ndarray) -> np.ndarray:
-        x = np.clip(x, -500, 500)  # جلوگیری از overflow
+        x = np.clip(x, -500, 500)
         return 1 / (1 + np.exp(-x))
     
     @staticmethod
@@ -52,7 +52,7 @@ class ActivationFunction:
 
 
 class DenseLayer:
-    """لایه Dense با قابلیت dropout و batch normalization"""
+    """Dense layer with dropout and batch normalization"""
     
     def __init__(
         self,
@@ -69,12 +69,12 @@ class DenseLayer:
         self.dropout_rate = dropout_rate
         self.use_batch_norm = use_batch_norm
         
-        # He initialization
-        limit = np.sqrt(6.0 / (input_size + output_size))
+        # He initialization for ReLU (uniform distribution)
+        # W ~ U(-sqrt(6/n_in), sqrt(6/n_in)) for ReLU activations
+        limit = np.sqrt(6.0 / input_size)
         self.weights = np.random.uniform(-limit, limit, (input_size, output_size))
         self.bias = np.zeros(output_size) if use_bias else None
         
-        # تنظیم تابع فعال‌سازی
         self.activation_name = activation
         if activation == 'relu':
             self.activation = ActivationFunction.relu
@@ -100,7 +100,6 @@ class DenseLayer:
             self.epsilon = 1e-8
             self.momentum = 0.9
         
-        # برای ذخیره مقادیر در forward pass
         self.last_input = None
         self.last_output = None
         self.last_dropout_mask = None
@@ -109,27 +108,26 @@ class DenseLayer:
         """Forward pass"""
         self.last_input = x.copy()
         
-        # محاسبه خروجی لایه
         output = np.dot(x, self.weights)
         
         if self.use_bias:
             output += self.bias
         
-        # Batch normalization
         if self.use_batch_norm:
+            self.last_pre_norm = output.copy()
             if training:
                 batch_mean = np.mean(output, axis=0)
                 batch_var = np.var(output, axis=0)
                 self.running_mean = self.momentum * self.running_mean + (1 - self.momentum) * batch_mean
                 self.running_var = self.momentum * self.running_var + (1 - self.momentum) * batch_var
                 normalized = (output - batch_mean) / np.sqrt(batch_var + self.epsilon)
+                self.last_batch_mean = batch_mean.copy()
+                self.last_batch_var = batch_var.copy()
             else:
                 normalized = (output - self.running_mean) / np.sqrt(self.running_var + self.epsilon)
-            # Store normalized for gradient computation
             self.last_normalized = normalized.copy()
             output = self.gamma * normalized + self.beta
         
-        # فعال‌سازی
         activated = self.activation(output)
         self.last_output = activated.copy()
         
@@ -146,51 +144,52 @@ class DenseLayer:
         if self.last_dropout_mask is not None:
             grad_output = grad_output * self.last_dropout_mask
         
-        # Gradient از تابع فعال‌سازی
         grad_activation = grad_output * self.activation_derivative(self.last_output)
         
-        # Batch normalization gradient
         if self.use_batch_norm:
-            # محاسبه gradient برای batch norm
-            # During forward: output = gamma * normalized + beta
-            # where normalized = (x - mean) / sqrt(var + eps)
-            # 
-            # Gradient w.r.t. gamma: dL/dgamma = sum(grad_activation * normalized)
-            # Gradient w.r.t. beta: dL/dbeta = sum(grad_activation)
-            # Gradient w.r.t. normalized: dL/dnormalized = grad_activation * gamma
-            # 
-            # For simplicity, we compute gradients for gamma and beta,
-            # but use simplified gradient flow for the input (just multiply by gamma)
             if not hasattr(self, 'last_normalized'):
-                # Fallback: if normalized wasn't stored, just pass through with gamma
                 grad_normalized = grad_activation * self.gamma
+                self.grad_gamma = np.zeros_like(self.gamma)
+                self.grad_beta = np.zeros_like(self.beta)
             else:
-                # Compute gradients for gamma and beta
                 if len(grad_activation.shape) > 1:
-                    # Batch case
                     self.grad_gamma = np.sum(grad_activation * self.last_normalized, axis=0)
                     self.grad_beta = np.sum(grad_activation, axis=0)
                 else:
-                    # Single sample case
                     self.grad_gamma = grad_activation * self.last_normalized
                     self.grad_beta = grad_activation
-                # Gradient w.r.t. normalized input (simplified - full computation would be more complex)
+                
                 grad_normalized = grad_activation * self.gamma
-            grad_activation = grad_normalized
+                
+                if len(grad_normalized.shape) > 1 and hasattr(self, 'last_batch_mean'):
+                    batch_size = grad_normalized.shape[0]
+                    pre_norm = self.last_pre_norm
+                    
+                    grad_var = np.sum(grad_normalized * (pre_norm - self.last_batch_mean), axis=0)
+                    grad_var = grad_var * (-0.5) * (self.last_batch_var + self.epsilon) ** (-1.5)
+                    
+                    grad_mean_1 = np.sum(grad_normalized * (-1.0 / np.sqrt(self.last_batch_var + self.epsilon)), axis=0)
+                    grad_mean_2 = grad_var * np.sum(-2.0 * (pre_norm - self.last_batch_mean), axis=0) / batch_size
+                    grad_mean = grad_mean_1 + grad_mean_2
+                    
+                    std_inv = 1.0 / np.sqrt(self.last_batch_var + self.epsilon)
+                    grad_activation = (grad_normalized * std_inv + 
+                                     grad_var * 2.0 * (pre_norm - self.last_batch_mean) / batch_size +
+                                     grad_mean / batch_size)
+                else:
+                    grad_activation = grad_normalized / np.sqrt(self.running_var + self.epsilon)
         
-        # Gradient نسبت به وزن‌ها و bias
         grad_weights = np.dot(self.last_input.T, grad_activation)
         grad_bias = np.sum(grad_activation, axis=0) if self.use_bias else None
         grad_input = np.dot(grad_activation, self.weights.T)
         
-        # ذخیره gradient‌ها برای به‌روزرسانی
         self.grad_weights = grad_weights
         self.grad_bias = grad_bias
         
         return grad_input
     
     def get_parameters(self) -> List[np.ndarray]:
-        """بازگرداندن پارامترهای قابل آموزش"""
+        """Get trainable parameters"""
         params = [self.weights]
         if self.use_bias:
             params.append(self.bias)
@@ -199,9 +198,8 @@ class DenseLayer:
         return params
     
     def get_gradients(self) -> List[np.ndarray]:
-        """بازگرداندن gradient‌ها"""
+        """Get gradients"""
         if not hasattr(self, 'grad_weights'):
-            # اگر backward صدا نشده باشد
             self.grad_weights = np.zeros_like(self.weights)
             self.grad_bias = np.zeros_like(self.bias) if self.use_bias else None
         
@@ -209,7 +207,6 @@ class DenseLayer:
         if self.use_bias:
             grads.append(self.grad_bias)
         if self.use_batch_norm:
-            # برای batch norm، gradient‌های gamma و beta را محاسبه می‌کنیم
             if hasattr(self, 'grad_gamma') and hasattr(self, 'grad_beta'):
                 grads.extend([self.grad_gamma, self.grad_beta])
             else:
@@ -219,7 +216,7 @@ class DenseLayer:
 
 
 class AdamOptimizer:
-    """بهینه‌ساز Adam از صفر"""
+    """Adam optimizer"""
     
     def __init__(self, learning_rate: float = 0.001, beta1: float = 0.9, beta2: float = 0.999, epsilon: float = 1e-8):
         self.learning_rate = learning_rate
@@ -231,7 +228,7 @@ class AdamOptimizer:
         self.v = {}  # velocity estimates
     
     def update(self, params: List[np.ndarray], grads: List[np.ndarray], param_ids: List[int]):
-        """به‌روزرسانی پارامترها با Adam"""
+        """Update parameters with Adam"""
         self.t += 1
         
         for param, grad, param_id in zip(params, grads, param_ids):
@@ -242,7 +239,6 @@ class AdamOptimizer:
                 self.m[param_id] = np.zeros_like(param)
                 self.v[param_id] = np.zeros_like(param)
             
-            # به‌روزرسانی moment estimates
             self.m[param_id] = self.beta1 * self.m[param_id] + (1 - self.beta1) * grad
             self.v[param_id] = self.beta2 * self.v[param_id] + (1 - self.beta2) * (grad ** 2)
             
@@ -250,12 +246,11 @@ class AdamOptimizer:
             m_hat = self.m[param_id] / (1 - self.beta1 ** self.t)
             v_hat = self.v[param_id] / (1 - self.beta2 ** self.t)
             
-            # به‌روزرسانی پارامتر
             param -= self.learning_rate * m_hat / (np.sqrt(v_hat) + self.epsilon)
 
 
 class NeuralNetwork:
-    """شبکه عصبی کامل با قابلیت‌های پیشرفته"""
+    """Neural network"""
     
     def __init__(
         self,
@@ -290,7 +285,7 @@ class NeuralNetwork:
         self._register_parameters()
     
     def _register_parameters(self):
-        """ثبت شناسه‌های پارامترها"""
+        """Register parameter IDs"""
         for layer_idx, layer in enumerate(self.layers):
             params = layer.get_parameters()
             for param_idx, param in enumerate(params):
@@ -299,20 +294,20 @@ class NeuralNetwork:
                 self.param_counter += 1
     
     def forward(self, x: np.ndarray, training: bool = True) -> np.ndarray:
-        """Forward pass در تمام لایه‌ها"""
+        """Forward pass"""
         output = x
         for layer in self.layers:
             output = layer.forward(output, training=training)
         return output
     
     def backward(self, grad_output: np.ndarray):
-        """Backward pass در تمام لایه‌ها"""
+        """Backward pass"""
         grad = grad_output
         for layer in reversed(self.layers):
             grad = layer.backward(grad)
     
     def update(self):
-        """به‌روزرسانی وزن‌ها با Adam"""
+        """Update weights"""
         all_params = []
         all_grads = []
         all_ids = []
@@ -328,11 +323,11 @@ class NeuralNetwork:
         self.optimizer.update(all_params, all_grads, all_ids)
     
     def predict(self, x: np.ndarray) -> np.ndarray:
-        """پیش‌بینی (بدون training mode)"""
+        """Predict"""
         return self.forward(x, training=False)
     
     def get_num_parameters(self) -> int:
-        """تعداد کل پارامترهای شبکه"""
+        """Get total number of parameters"""
         total = 0
         for layer in self.layers:
             params = layer.get_parameters()
