@@ -229,6 +229,7 @@ $$
 where $r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{\text{old}}}(a_t|s_t)}$ is the importance sampling ratio, $\hat{A}_t$ is the advantage estimate, and $\epsilon = 0.2$ is the clipping parameter.
 
 The gradient uses the term that minimizes the objective:
+
 $$
 \nabla_\theta L^{CLIP}(\theta) = \mathbb{E}_t\left[\nabla_\theta \log \pi_\theta(a_t|s_t) \cdot \begin{cases} \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon) \hat{A}_t & \text{if } \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon) \hat{A}_t < r_t(\theta) \hat{A}_t \\ r_t(\theta) \hat{A}_t & \text{otherwise} \end{cases}\right]
 $$
