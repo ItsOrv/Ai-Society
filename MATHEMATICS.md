@@ -21,6 +21,7 @@ where $W^{(l)} \in \mathbb{R}^{n_{\text{in}} \times n_{\text{out}}}$ is the weig
 ### Activation Functions
 
 **ReLU:**
+
 $$
 \sigma(x) = \max(0, x)
 $$
@@ -30,6 +31,7 @@ $$
 $$
 
 **Tanh:**
+
 $$
 \sigma(x) = \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
 $$
@@ -39,6 +41,7 @@ $$
 $$
 
 **Sigmoid:**
+
 $$
 \sigma(x) = \frac{1}{1 + e^{-x}}
 $$
@@ -48,6 +51,7 @@ $$
 $$
 
 **Linear:**
+
 $$
 \sigma(x) = x
 $$
@@ -59,16 +63,19 @@ $$
 ### Backpropagation
 
 Error signal for output layer $L$:
+
 $$
 \delta^{(L)} = \nabla_a C \odot \sigma'(z^{(L)})
 $$
 
 Error signal for hidden layer $l$:
+
 $$
 \delta^{(l)} = ((W^{(l+1)})^T \delta^{(l+1)}) \odot \sigma'(z^{(l)})
 $$
 
 Gradients with respect to parameters:
+
 $$
 \nabla_{W^{(l)}} C = a^{(l-1)} (\delta^{(l)})^T
 $$
@@ -80,6 +87,7 @@ $$
 ### Batch Normalization
 
 Forward pass during training:
+
 $$
 \mu_B = \frac{1}{m} \sum_{i=1}^{m} x_i
 $$
@@ -99,6 +107,7 @@ $$
 where $m$ is batch size, $\gamma$ and $\beta$ are learnable parameters, and $\epsilon = 10^{-8}$.
 
 Running statistics (inference):
+
 $$
 \mu_{\text{running}} = \text{momentum} \cdot \mu_{\text{running}} + (1 - \text{momentum}) \cdot \mu_B
 $$
@@ -108,6 +117,7 @@ $$
 $$
 
 Backward pass gradients:
+
 $$
 \frac{\partial L}{\partial \gamma} = \sum_{i=1}^{m} \frac{\partial L}{\partial y_i} \hat{x}_i
 $$
@@ -135,6 +145,7 @@ $$
 ### Dropout
 
 During training:
+
 $$
 y_i = \begin{cases} \frac{x_i}{1-p} & \text{with probability } 1-p \\ 0 & \text{with probability } p \end{cases}
 $$
@@ -142,6 +153,7 @@ $$
 where $p$ is the dropout rate. The scaling factor $1/(1-p)$ maintains expected activation during training.
 
 During inference:
+
 $$
 y_i = x_i
 $$
@@ -149,16 +161,19 @@ $$
 ### Adam Optimizer
 
 First moment estimate:
+
 $$
 m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t
 $$
 
 Second moment estimate:
+
 $$
 v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2
 $$
 
 Bias correction:
+
 $$
 \hat{m}_t = \frac{m_t}{1 - \beta_1^t}
 $$
@@ -168,6 +183,7 @@ $$
 $$
 
 Parameter update:
+
 $$
 \theta_t = \theta_{t-1} - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
 $$
@@ -177,6 +193,7 @@ where $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\epsilon = 10^{-8}$, and $\alpha$ is 
 ### Weight Initialization
 
 He initialization for ReLU (uniform distribution):
+
 $$
 W_{ij} \sim \mathcal{U}\left(-\sqrt{\frac{6}{n_{\text{in}}}}, \sqrt{\frac{6}{n_{\text{in}}}}\right)
 $$
@@ -188,6 +205,7 @@ where $n_{\text{in}}$ is the number of input units.
 ### Policy Gradient Objective
 
 The policy gradient objective:
+
 $$
 J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}[R(\tau)]
 $$
@@ -195,6 +213,7 @@ $$
 where $\tau = (s_0, a_0, r_0, s_1, a_1, r_1, \ldots)$ is a trajectory and $R(\tau) = \sum_{t=0}^{T} \gamma^t r_t$ is the discounted return.
 
 Policy gradient theorem:
+
 $$
 \nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\left[\sum_{t=0}^{T} \nabla_\theta \log \pi_\theta(a_t|s_t) R(\tau)\right]
 $$
@@ -231,11 +250,13 @@ $$
 where $\gamma = 0.99$ is the discount factor and $\lambda = 0.95$ is the GAE parameter.
 
 Returns:
+
 $$
 \hat{R}_t = \hat{A}_t + V(s_t)
 $$
 
 Advantage normalization:
+
 $$
 \hat{A}_t \leftarrow \frac{\hat{A}_t - \mu(\hat{A})}{\sigma(\hat{A}) + \epsilon}
 $$
@@ -253,6 +274,7 @@ where $c_v = 0.5$ is the value coefficient and $\phi$ are the value network para
 ### Entropy Bonus
 
 For a Gaussian policy with diagonal covariance:
+
 $$
 H(\pi_\theta) = \frac{1}{2} \sum_{i=1}^{d} \log(2\pi e \sigma_i^2)
 $$
@@ -260,6 +282,7 @@ $$
 where $d$ is the action dimension and $\sigma_i$ is the standard deviation for dimension $i$.
 
 The entropy bonus is added to the policy loss:
+
 $$
 L(\theta) = L^{CLIP}(\theta) - c_e H(\pi_\theta)
 $$
@@ -269,6 +292,7 @@ where $c_e = 0.01$ is the entropy coefficient.
 ### Gaussian Policy
 
 Policy distribution:
+
 $$
 \pi_\theta(a|s) = \mathcal{N}(\mu_\theta(s), \Sigma_\theta(s))
 $$
@@ -276,16 +300,19 @@ $$
 where $\mu_\theta(s)$ is the mean (network output) and $\Sigma_\theta(s) = \text{diag}(\sigma_1^2, \ldots, \sigma_d^2)$ is the diagonal covariance matrix.
 
 Log probability:
+
 $$
 \log \pi_\theta(a|s) = -\frac{1}{2}\sum_{i=1}^{d}\left[\frac{(a_i - \mu_i)^2}{\sigma_i^2} + \log(2\pi \sigma_i^2)\right]
 $$
 
 Gradient with respect to mean:
+
 $$
 \nabla_\mu \log \pi_\theta(a|s) = \frac{a - \mu}{\sigma^2}
 $$
 
 Gradient with respect to log standard deviation:
+
 $$
 \nabla_{\log \sigma} \log \pi_\theta(a|s) = \frac{(a - \mu)^2}{\sigma^2} - 1
 $$
@@ -293,6 +320,7 @@ $$
 ### Gradient Clipping
 
 Gradients are clipped to prevent exploding gradients:
+
 $$
 g_{\mathrm{clipped}} = g \cdot \min\left(1, \frac{\mathrm{max\_norm}}{\left\|g\right\|_2}\right)
 $$
@@ -304,6 +332,7 @@ where $\mathrm{max\_norm} = 0.5$ is the maximum gradient norm.
 ### State Space
 
 The observation vector:
+
 $$
 s_t = [p_t, L_t, E_t, d_{\text{min},t}]
 $$
@@ -317,6 +346,7 @@ where:
 ### Action Space
 
 Continuous 3D movement:
+
 $$
 a_t \in [-1, 1]^3
 $$
