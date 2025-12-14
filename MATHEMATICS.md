@@ -2,6 +2,8 @@
 
 Complete mathematical derivations for all algorithms in this implementation.
 
+> **Note**: Mathematical formulas may not render correctly on GitHub's mobile app. For the best viewing experience, please use the desktop web version or view the raw file.
+
 ## Neural Networks
 
 ### Forward Propagation
