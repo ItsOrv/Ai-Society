@@ -294,7 +294,7 @@ $$
 
 Gradients are clipped to prevent exploding gradients:
 $$
-g_{clipped} = g \cdot \min\left(1, \frac{\text{max\_norm}}{||g\|_2}\right)
+g_{clipped} = g \cdot \min\left(1, \frac{\text{max\_norm}}{\|g\|_2}\right)
 $$
 
 where $\text{max\_norm} = 0.5$ is the maximum gradient norm.
@@ -380,7 +380,7 @@ where $p_{\text{respawn}} = 0.05$ is the respawn rate per step, and respawn occu
 
 A message is received if:
 $$
-||p_{\text{sender}} - p_{\text{receiver}}\|_2 \leq \text{range\_limit} \quad \text{AND} \quad (t_{\text{current}} - t_{\text{sent}}) \leq \text{TTL}
+\|p_{\text{sender}} - p_{\text{receiver}}\|_2 \leq \text{range\_limit} \quad \text{AND} \quad (t_{\text{current}} - t_{\text{sent}}) \leq \text{TTL}
 $$
 
 where $\|\cdot\|_2$ is the Euclidean distance, $\text{range\_limit}$ depends on message type, and $\text{TTL} = 50$ is the time-to-live.
