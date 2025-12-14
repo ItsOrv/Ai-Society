@@ -100,11 +100,11 @@ where $m$ is batch size, $\gamma$ and $\beta$ are learnable parameters, and $\ep
 
 Running statistics (inference):
 $$
-\mu_{running} = \text{momentum} \cdot \mu_{running} + (1 - \text{momentum}) \cdot \mu_B
+\mu_{\text{running}} = \text{momentum} \cdot \mu_{\text{running}} + (1 - \text{momentum}) \cdot \mu_B
 $$
 
 $$
-\sigma_{running}^2 = \text{momentum} \cdot \sigma_{running}^2 + (1 - \text{momentum}) \cdot \sigma_B^2
+\sigma_{\text{running}}^2 = \text{momentum} \cdot \sigma_{\text{running}}^2 + (1 - \text{momentum}) \cdot \sigma_B^2
 $$
 
 Backward pass gradients:
@@ -353,7 +353,7 @@ $$
 ### Energy Dynamics
 
 $$
-E_{t+1} = E_t - \beta + R_{\text{resource}} \cdot \mathbb{I}(\text{resource collected}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle hit})
+E_{t+1} = E_t - \beta + R_{\text{resource}} \cdot \mathbb{I}(\text{resource\_collected}) + R_{\text{obstacle}} \cdot \mathbb{I}(\text{obstacle\_hit})
 $$
 
 where $\beta = 1.0$ is the energy decay rate per step.
