@@ -294,10 +294,10 @@ $$
 
 Gradients are clipped to prevent exploding gradients:
 $$
-g_{\text{clipped}} = g \cdot \min\left(1, \frac{\text{max\_norm}}{\left\|g\right\|_2}\right)
+g_{\mathrm{clipped}} = g \cdot \min\left(1, \frac{\mathrm{max\_norm}}{\left\|g\right\|_2}\right)
 $$
 
-where $\text{max\_norm} = 0.5$ is the maximum gradient norm.
+where $\mathrm{max\_norm} = 0.5$ is the maximum gradient norm.
 
 ## Environment
 
@@ -309,7 +309,7 @@ s_t = [p_t, L_t, E_t, d_{\text{min},t}]
 $$
 
 where:
-- $p_t \in [0,1]^3$: normalized position $(x/\text{grid\_size}, y/\text{grid\_size}, z/\text{grid\_size})$ where $\text{grid\_size}$ is the environment grid size
+- $p_t \in [0,1]^3$: normalized position $(x/\mathrm{grid\_size}, y/\mathrm{grid\_size}, z/\mathrm{grid\_size})$ where $\mathrm{grid\_size}$ is the environment grid size
 - $L_t \in \mathbb{R}^{27}$: local 3×3×3 grid view around agent position
 - $E_t \in [0,1]$: normalized energy level $E_t / 100$
 - $d_{\text{min},t} \in [0,1]$: normalized minimum distance to nearest resource
@@ -326,7 +326,7 @@ $$
 Position update:
 
 $$
-p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size} - 1]^3)
+p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \mathrm{grid\_size} - 1]^3)
 $$
 
 where $\alpha = 1.5$ is the movement scale.
@@ -383,14 +383,14 @@ $$
 \left\|p_{\text{sender}} - p_{\text{receiver}}\right\|_2 \leq \text{range\_limit} \quad \text{AND} \quad (t_{\text{current}} - t_{\text{sent}}) \leq \text{TTL}
 $$
 
-where $\left\|\cdot\right\|_2$ is the Euclidean distance, $\text{range\_limit}$ depends on message type, and $\text{TTL} = 50$ is the time-to-live.
+where $\left\|\cdot\right\|_2$ is the Euclidean distance, $\mathrm{range\_limit}$ depends on message type, and $\mathrm{TTL} = 50$ is the time-to-live.
 
 ### Cooperation History
 
 For mixed cooperation mode, cooperation score:
 
 $$
-\text{score}_j = \frac{\text{helpful\_actions}_j \cdot \text{decay}^{t - t_{\text{last}}}}{\text{total\_interactions}_j \cdot \text{decay}^{t - t_{\text{last}}}}
+\mathrm{score}_j = \frac{\mathrm{helpful\_actions}_j \cdot \mathrm{decay}^{t - t_{\mathrm{last}}}}{\mathrm{total\_interactions}_j \cdot \mathrm{decay}^{t - t_{\mathrm{last}}}}
 $$
 
 where $\text{decay} = 0.95$ is the decay factor and $j$ is the other agent ID.
