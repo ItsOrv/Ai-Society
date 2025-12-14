@@ -326,7 +326,7 @@ $$
 Position update:
 
 $$
-p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size} - 1]^3)
+p_{t+1} = \text{clip}(p_t + \alpha \cdot a_t, [0, \text{grid\_size}-1]^3)
 $$
 
 where $\alpha = 1.5$ is the movement scale.
