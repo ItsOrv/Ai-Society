@@ -262,7 +262,7 @@ class PPOAgent:
         clipped_ratio = np.clip(ratio, 1 - self.clip_epsilon, 1 + self.clip_epsilon)
         policy_loss_1 = -advantages * ratio
         policy_loss_2 = -advantages * clipped_ratio
-        policy_loss = np.mean(np.maximum(policy_loss_1, policy_loss_2))
+        clipped_policy_loss = np.mean(np.maximum(policy_loss_1, policy_loss_2))
         
         if len(std.shape) > 1:
             entropy_per_sample = 0.5 * np.sum(np.log(2 * np.pi * np.e * std ** 2 + 1e-8), axis=-1)
@@ -270,10 +270,20 @@ class PPOAgent:
             entropy_per_sample = 0.5 * np.sum(np.log(2 * np.pi * np.e * std ** 2 + 1e-8))
         entropy = np.mean(entropy_per_sample)
         
+        policy_loss = clipped_policy_loss - self.entropy_coef * entropy
+        
         values = self.value_net.forward(obs, training=True)
         value_loss = self.value_coef * np.mean((values - returns) ** 2)
         
-        policy_grad_log_prob = -advantages * clipped_ratio
+        unclipped_term = ratio * advantages
+        clipped_term = clipped_ratio * advantages
+        use_clipped = clipped_term < unclipped_term
+        
+        policy_grad_log_prob = np.where(
+            use_clipped,
+            -advantages * clipped_ratio,
+            -advantages * ratio
+        )
         
         var = std ** 2 + 1e-8
         if len(actions.shape) > 1 and len(mean.shape) > 1:
