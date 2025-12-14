@@ -383,7 +383,7 @@ $$
 ||p_{sender} - p_{receiver}||_2 \leq \text{range\_limit} \quad \text{AND} \quad (t_{current} - t_{sent}) \leq \text{TTL}
 $$
 
-where $||\cdot||_2$ is the Euclidean distance, $\text{range\_limit}$ depends on message type, and $\text{TTL} = 50$ is the time-to-live.
+where $\|\cdot\|_2$ is the Euclidean distance, $\text{range\_limit}$ depends on message type, and $\text{TTL} = 50$ is the time-to-live.
 
 ### Cooperation History
 
