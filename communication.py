@@ -150,6 +150,10 @@ class CommunicationProtocol:
         self.known_resources: Dict[Tuple[int, int, int], int] = {}
         self.known_obstacles: Set[Tuple[int, int, int]] = set()
         self.cooperation_partners: Set[int] = set()
+        # History-based cooperation tracking
+        self.cooperation_history: Dict[int, Dict[str, float]] = {}  # agent_id -> {helpful_actions, total_interactions, last_interaction}
+        self.history_decay: float = 0.95  # Decay factor for old interactions
+        self.cooperation_threshold: float = 0.5  # Threshold for cooperation decision
     
     def send_resource_found(self, position: Tuple[int, int, int], energy_value: float):
         """Send resource found message"""
@@ -235,6 +239,8 @@ class CommunicationProtocol:
                         'sender': message.sender_id
                     })
                     self.known_resources[resource_pos] = message.timestamp
+                    # Record helpful cooperation (resource sharing)
+                    self.record_cooperation_event(message.sender_id, was_helpful=True)
             
             elif message.message_type == MessageType.RESOURCE_DEPLETED:
                 resource_pos = tuple(message.content['position'])
@@ -247,6 +253,8 @@ class CommunicationProtocol:
                 if obstacle_pos not in self.known_obstacles:
                     processed_info['new_obstacles'].append(obstacle_pos)
                     self.known_obstacles.add(obstacle_pos)
+                    # Record helpful cooperation (obstacle warning)
+                    self.record_cooperation_event(message.sender_id, was_helpful=True)
             
             elif message.message_type == MessageType.COORDINATION:
                 processed_info['coordination_requests'].append({
@@ -255,6 +263,8 @@ class CommunicationProtocol:
                     'action': message.content['action']
                 })
                 self.cooperation_partners.add(message.sender_id)
+                # Record coordination attempt (neutral/positive)
+                self.record_cooperation_event(message.sender_id, was_helpful=True)
             
             elif message.message_type == MessageType.HELP_REQUEST:
                 processed_info['help_requests'].append({
@@ -288,8 +298,51 @@ class CommunicationProtocol:
         return distances[0][0] if distances else None
     
     def should_cooperate(self, other_agent_id: int) -> bool:
-        """Decide whether to cooperate"""
-        return other_agent_id in self.cooperation_partners
+        """Decide whether to cooperate based on history"""
+        # Initialize history if not present
+        if other_agent_id not in self.cooperation_history:
+            self.cooperation_history[other_agent_id] = {
+                'helpful_actions': 0.0,
+                'total_interactions': 0.0,
+                'last_interaction': -1
+            }
+        
+        history = self.cooperation_history[other_agent_id]
+        
+        # Decay old interactions
+        if history['last_interaction'] >= 0:
+            steps_since = self.network.current_timestamp - history['last_interaction']
+            if steps_since > 0:
+                decay_factor = self.history_decay ** steps_since
+                history['helpful_actions'] *= decay_factor
+                history['total_interactions'] *= decay_factor
+        
+        # Calculate cooperation score based on history
+        if history['total_interactions'] > 0:
+            cooperation_score = history['helpful_actions'] / history['total_interactions']
+        else:
+            # No history: default to cooperation (optimistic)
+            cooperation_score = 0.6
+        
+        # Update last interaction timestamp
+        history['last_interaction'] = self.network.current_timestamp
+        
+        return cooperation_score >= self.cooperation_threshold
+    
+    def record_cooperation_event(self, other_agent_id: int, was_helpful: bool):
+        """Record a cooperation event in history"""
+        if other_agent_id not in self.cooperation_history:
+            self.cooperation_history[other_agent_id] = {
+                'helpful_actions': 0.0,
+                'total_interactions': 0.0,
+                'last_interaction': -1
+            }
+        
+        history = self.cooperation_history[other_agent_id]
+        history['total_interactions'] += 1.0
+        if was_helpful:
+            history['helpful_actions'] += 1.0
+        history['last_interaction'] = self.network.current_timestamp
     
     def get_communication_features(self, current_position: Tuple[int, int, int]) -> np.ndarray:
         """Extract communication features for observation"""
