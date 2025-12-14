@@ -140,30 +140,6 @@ Some ideas:
 
 **Manual Log Std Update**: The policy's log_std parameter uses a fixed learning rate (0.001) instead of the Adam optimizer. This works but is inconsistent with the mean network updates.
 
-## Audit Summary
-
-This codebase has been thoroughly audited for correctness:
-
-**Verified**:
-- ✅ PPO implementation matches Schulman et al. (2017) paper
-- ✅ Neural network gradients computed correctly from scratch
-- ✅ All mathematical formulas match implementation
-- ✅ System is learnable (agents can learn the task)
-- ✅ No dominant exploit strategies
-
-**Fixed**:
-- ✅ PPO policy gradient bug (now correctly uses clipped/unclipped ratio based on minimum)
-- ✅ He initialization (changed from Glorot/Xavier to correct He initialization)
-- ✅ Entropy bonus (now properly added to policy loss)
-- ✅ Batch normalization backward pass (completed full gradient computation)
-- ✅ Mixed cooperation mode (now implements history-based decisions)
-
-**Remaining Limitations**:
-- ⚠️ Environment physics inconsistencies (non-dominant, documented above)
-- ⚠️ Minor PPO optimizations (log ratio pre-clipping, manual log_std update)
-
-See audit reports in the repository for detailed verification.
-
 ## Math Documentation
 
 See `MATHEMATICS.md` for the full mathematical derivations of:
