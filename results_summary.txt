@@ -1,0 +1,54 @@
+================================================================================
+AI-Society: Multi-Agent Reinforcement Learning Results
+================================================================================
+
+📊 GROUP STATISTICS
+--------------------------------------------------------------------------------
+Number of Agents:        3
+Total Episodes:          300
+Average Reward/Agent:    -20.40
+Average Resources/Agent: 0.04
+Average Survival Time:   98.2 steps
+
+📡 COMMUNICATION STATISTICS
+--------------------------------------------------------------------------------
+Messages Sent:           0
+Messages Received:       0
+Cooperation Events:      0
+
+🤖 INDIVIDUAL AGENT PERFORMANCE
+--------------------------------------------------------------------------------
+
+Agent 0:
+  Average Reward:         -21.77
+  Resources Collected:   0.01
+  Survival Time:         96.7 steps
+  Energy Efficiency:     -0.5316
+  Obstacles Hit:          0.25
+  Rank by Reward:         #3
+  Rank by Efficiency:     #3
+  Rank by Survival:       #3
+
+Agent 1:
+  Average Reward:         -19.89
+  Resources Collected:   0.05
+  Survival Time:         98.8 steps
+  Energy Efficiency:     -0.2875
+  Obstacles Hit:          0.18
+  Rank by Reward:         #2
+  Rank by Efficiency:     #1
+  Rank by Survival:       #2
+
+Agent 2:
+  Average Reward:         -19.54
+  Resources Collected:   0.07
+  Survival Time:         99.2 steps
+  Energy Efficiency:     -0.3901
+  Obstacles Hit:          0.19
+  Rank by Reward:         #1
+  Rank by Efficiency:     #2
+  Rank by Survival:       #1
+
+================================================================================
+Results Summary Complete
+================================================================================

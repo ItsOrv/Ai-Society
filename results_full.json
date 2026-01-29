@@ -1,0 +1,90 @@
+{
+  "agent_metrics": {
+    "0": {
+      "total_reward": -2176.7020635450094,
+      "resources_collected": 1,
+      "obstacles_hit": 25,
+      "distance_traveled": 0.0,
+      "energy_efficiency": -0.5316380586266876,
+      "survival_time": 9666,
+      "episodes": 100
+    },
+    "1": {
+      "total_reward": -1989.449965696516,
+      "resources_collected": 5,
+      "obstacles_hit": 18,
+      "distance_traveled": 0.0,
+      "energy_efficiency": -0.2875210163517809,
+      "survival_time": 9875,
+      "episodes": 100
+    },
+    "2": {
+      "total_reward": -1954.4393411933502,
+      "resources_collected": 7,
+      "obstacles_hit": 19,
+      "distance_traveled": 0.0,
+      "energy_efficiency": -0.3900929577334834,
+      "survival_time": 9925,
+      "episodes": 100
+    }
+  },
+  "communication_metrics": {
+    "messages_sent": 0,
+    "messages_received": 0,
+    "cooperation_events": 0,
+    "resource_sharing_events": 0
+  },
+  "group_statistics": {
+    "num_agents": 3,
+    "average_reward_per_agent": -20.40197123478292,
+    "std_reward_per_agent": 0.9757607272956843,
+    "average_resources_per_agent": 0.043333333333333335,
+    "average_survival_time": 98.21999999999998,
+    "total_episodes": 300,
+    "communication_stats": {
+      "messages_sent": 0,
+      "messages_received": 0,
+      "cooperation_events": 0,
+      "resource_sharing_events": 0
+    }
+  },
+  "agent_comparisons": {
+    "0": {
+      "rank_by_reward": 3,
+      "rank_by_efficiency": 3,
+      "rank_by_survival": 3,
+      "average_reward": -21.767020635450095,
+      "average_resources_collected": 0.01,
+      "average_obstacles_hit": 0.25,
+      "average_distance_traveled": 0.0,
+      "average_survival_time": 96.66,
+      "energy_efficiency": -0.5316380586266876,
+      "total_episodes": 100
+    },
+    "1": {
+      "rank_by_reward": 2,
+      "rank_by_efficiency": 1,
+      "rank_by_survival": 2,
+      "average_reward": -19.89449965696516,
+      "average_resources_collected": 0.05,
+      "average_obstacles_hit": 0.18,
+      "average_distance_traveled": 0.0,
+      "average_survival_time": 98.75,
+      "energy_efficiency": -0.2875210163517809,
+      "total_episodes": 100
+    },
+    "2": {
+      "rank_by_reward": 1,
+      "rank_by_efficiency": 2,
+      "rank_by_survival": 1,
+      "average_reward": -19.544393411933502,
+      "average_resources_collected": 0.07,
+      "average_obstacles_hit": 0.19,
+      "average_distance_traveled": 0.0,
+      "average_survival_time": 99.25,
+      "energy_efficiency": -0.3900929577334834,
+      "total_episodes": 100
+    }
+  },
+  "export_timestamp": "2025-12-14T16:52:28.936131"
+}

@@ -1,0 +1,1654 @@
+============================================================
+Multi-Agent Reinforcement Learning Simulation
+============================================================
+Number of robots: 3
+Number of episodes: 100
+Grid size: 15
+Cooperation mode: mixed
+============================================================
+================================================================================
+Multi-Agent RL Simulation - Text-Based Visualization
+================================================================================
+
+Starting training...
+
+Episode 0, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(10), np.int64(0)), Energy=99.0
+Robot 1: Position=(np.int64(5), np.int64(9), np.int64(1)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(11), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 0, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(9)), Energy=49.0
+Robot 1: Position=(np.int64(7), np.int64(14), np.int64(13)), Energy=49.0
+Robot 2: Position=(np.int64(11), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 1, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(10), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(7), np.int64(13), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(13), np.int64(4), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 1, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(13)), Energy=49.0
+Robot 1: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=19.0
+Robot 2: Position=(np.int64(14), np.int64(2), np.int64(0)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 2, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(14), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(7), np.int64(12), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(13), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 2, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(13), np.int64(1), np.int64(13)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 3, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(4), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(7), np.int64(12), np.int64(10)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(8), np.int64(6)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 3, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(0), np.int64(13), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(0), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 4, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(5), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(3), np.int64(10), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(12), np.int64(10), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 4, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(3), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 5, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(10), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(4), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(11), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 5, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(2), np.int64(12), np.int64(12)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(3), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 6, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(14), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(0), np.int64(4), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(4), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 6, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(1), np.int64(13), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 7, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(11), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(4), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(3), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 7, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 8, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(9), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(10), np.int64(7), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(7), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 8, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(13), np.int64(12), np.int64(13)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 9, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(4), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(1), np.int64(1)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(1), np.int64(2)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 9, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(13), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 10/100
+  Average Reward: -18.49
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-17.91, Resources=0.0
+  Robot 1: Reward=-21.11, Resources=0.0
+  Robot 2: Reward=-19.89, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -19.64
+  Average Length: 98.9
+
+Episode 10, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(6), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(1), np.int64(6), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(8), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 10, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 11, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(1), np.int64(5), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(5), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 11, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 12, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(2), np.int64(10)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(8), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(13), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 12, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 13, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(14), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(5), np.int64(14), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(12), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 13, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 14, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(5), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(5), np.int64(1), np.int64(2)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(9), np.int64(2)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 14, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(13), np.int64(13), np.int64(13)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 15, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(1), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(12), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(10), np.int64(10), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 15, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 16, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(11), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(7), np.int64(1)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(3), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 16, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(13)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 16, Step 100
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 17, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(7), np.int64(4)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(11), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(12), np.int64(12), np.int64(2)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 17, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 18, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(14), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(12), np.int64(12), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(5), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 18, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(12), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 19, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(1), np.int64(8)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(2), np.int64(10)), Energy=99.0
+Robot 2: Position=(np.int64(10), np.int64(5), np.int64(5)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 19, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 20/100
+  Average Reward: -18.63
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-18.28, Resources=0.0
+  Robot 1: Reward=-18.60, Resources=0.1
+  Robot 2: Reward=-23.30, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -20.48
+  Average Length: 97.9
+
+Episode 20, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(8), np.int64(8)), Energy=99.0
+Robot 1: Position=(np.int64(10), np.int64(4), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(2), np.int64(11)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 20, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=19.0
+Robot 1: Position=(np.int64(13), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 21, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(3), np.int64(13), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(1), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 21, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 22, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(1), np.int64(8), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(6), np.int64(10), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(6), np.int64(5)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 22, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 23, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(13), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(2), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(13), np.int64(14), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 23, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=34.0
+Resources: 8, Obstacles: 15
+
+Episode 24, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(3), np.int64(1)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(4), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(12), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 24, Step 50
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=19.0
+Robot 2: Position=(np.int64(14), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 25, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(12), np.int64(0)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(3), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(9), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 25, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 26, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(8), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(3), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(14), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 26, Step 50
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 27, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(1), np.int64(8)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(7), np.int64(3)), Energy=99.0
+Robot 2: Position=(np.int64(0), np.int64(13), np.int64(2)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 27, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=34.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 28, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(11), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(7), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(11), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 28, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 29, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(2), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(10), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(8), np.int64(11)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 29, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 30/100
+  Average Reward: -18.57
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-23.89, Resources=0.0
+  Robot 1: Reward=-19.88, Resources=0.0
+  Robot 2: Reward=-22.21, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -25.86
+  Average Length: 92.0
+
+Episode 30, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(13), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(11), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(14), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 30, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 31, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(6), np.int64(5)), Energy=84.0
+Robot 1: Position=(np.int64(10), np.int64(3), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(10), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 31, Step 50
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=34.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 31, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 32, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(14), np.int64(4), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(12), np.int64(1), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(4), np.int64(6)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 32, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 33, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(6), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(7), np.int64(11), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(10), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 33, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(1), np.int64(12), np.int64(13)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 34, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(13), np.int64(0)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(4), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(9), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 34, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(13), np.int64(12)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 35, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(10), np.int64(10)), Energy=99.0
+Robot 1: Position=(np.int64(7), np.int64(13), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(0), np.int64(0)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 35, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 36, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(8), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(3), np.int64(8), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 36, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(12), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 37, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(12), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(14), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(7), np.int64(6)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 37, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 38, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(14), np.int64(10)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(2), np.int64(3)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(7), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 38, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 39, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(14), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(4), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(10), np.int64(10), np.int64(11)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 39, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 40/100
+  Average Reward: -18.89
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-24.96, Resources=0.0
+  Robot 1: Reward=-19.94, Resources=0.0
+  Robot 2: Reward=-23.12, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -24.71
+  Average Length: 94.2
+
+Episode 40, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(8), np.int64(9), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(6), np.int64(7), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(13), np.int64(9), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 40, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 41, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(3), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(12), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(9), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 41, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 42, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(14), np.int64(7)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(8), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(12), np.int64(1)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 42, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 43, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(9), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(14), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(11), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 43, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 44, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(11), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(12), np.int64(1), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(11), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 44, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Resources: 8, Obstacles: 15
+
+Episode 44, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 45, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(4), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(2), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(1), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 45, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 45, Step 100
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 46, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(6), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(13), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(4), np.int64(3), np.int64(5)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 46, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 47, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(7), np.int64(4)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(14), np.int64(3)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(1), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 47, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 48, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(6), np.int64(5), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(4), np.int64(6)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 48, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 49, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(11), np.int64(4)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(11), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(13), np.int64(1)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 49, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 50/100
+  Average Reward: -18.90
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-23.70, Resources=0.0
+  Robot 1: Reward=-20.83, Resources=0.0
+  Robot 2: Reward=-21.73, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -19.74
+  Average Length: 99.2
+
+Episode 50, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(11), np.int64(0)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(2), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(1), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 50, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 50, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 51, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(3), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(10), np.int64(2)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(11), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 51, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 52, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(6), np.int64(4)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(14), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(6), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 52, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 53, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(14), np.int64(13), np.int64(6)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(5), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(2), np.int64(8), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 53, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 54, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(8), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(8), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(12), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 54, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 55, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(10), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(12), np.int64(4), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(6), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 55, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 56, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(11), np.int64(1)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(9), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(2), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 56, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=19.0
+Resources: 8, Obstacles: 15
+
+Episode 57, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(2), np.int64(7)), Energy=99.0
+Robot 1: Position=(np.int64(0), np.int64(0), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(4), np.int64(14), np.int64(1)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 57, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 58, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(11), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(6), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(4), np.int64(4), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 58, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 59, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(1), np.int64(10)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(8), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(14), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 59, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(13), np.int64(12), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 60/100
+  Average Reward: -18.89
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-22.87, Resources=0.0
+  Robot 1: Reward=-20.49, Resources=0.0
+  Robot 2: Reward=-21.24, Resources=0.1
+
+Recent Performance (last 10 episodes):
+  Average Reward: -18.77
+  Average Length: 99.8
+
+Episode 60, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(5), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(0), np.int64(12), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(1), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 60, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 61, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(12), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(4), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 61, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 62, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(11), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(4), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(1), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 62, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 63, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(13), np.int64(8)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(12), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(6), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 63, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(12)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(13)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 64, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(13), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(3), np.int64(5), np.int64(2)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(7), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 64, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 65, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(1), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(13), np.int64(2)), Energy=124.0
+Robot 2: Position=(np.int64(3), np.int64(14), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 65, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Robot 2: Position=(np.int64(13), np.int64(12), np.int64(13)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 65, Step 100
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 66, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(1), np.int64(14), np.int64(7)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(0), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(9), np.int64(2)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 66, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 67, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(5), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(12), np.int64(10)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(5), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 67, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 68, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(1), np.int64(8), np.int64(7)), Energy=99.0
+Robot 1: Position=(np.int64(3), np.int64(3), np.int64(2)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(10), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 68, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 69, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(8), np.int64(6), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(4), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(3), np.int64(7)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 69, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 70/100
+  Average Reward: -18.22
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-22.31, Resources=0.0
+  Robot 1: Reward=-19.95, Resources=0.0
+  Robot 2: Reward=-21.27, Resources=0.0
+
+Recent Performance (last 10 episodes):
+  Average Reward: -19.02
+  Average Length: 100.1
+
+Episode 70, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(7), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(7), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(10), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 70, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 71, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(9), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(11), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(12), np.int64(8), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 71, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 72, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(6), np.int64(4), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(5), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(6), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 72, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 73, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(14), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(5), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(7), np.int64(1)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 73, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 74, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(9), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(11), np.int64(1)), Energy=99.0
+Robot 2: Position=(np.int64(10), np.int64(4), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 74, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 74, Step 100
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 75, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(5), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(2), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(2), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 75, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(12)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 76, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(1), np.int64(8)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(1), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(14), np.int64(5)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 76, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 76, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 77, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(3), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(6), np.int64(12), np.int64(3)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(13), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 77, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 78, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(2), np.int64(5), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(12), np.int64(1), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(4), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 78, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 79, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(10), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(2), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(14), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 79, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=74.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 7, Obstacles: 15
+
+Episode 79, Step 100
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+Episode 80/100
+  Average Reward: -11.08
+  Average Length: 108.3
+  Total Resources Collected: 1
+  Robot 0: Reward=-21.52, Resources=0.0
+  Robot 1: Reward=-19.49, Resources=0.1
+  Robot 2: Reward=-20.63, Resources=0.1
+
+Recent Performance (last 10 episodes):
+  Average Reward: -16.17
+  Average Length: 102.5
+
+Episode 80, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(5), np.int64(3), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(6), np.int64(11), np.int64(12)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(11), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 80, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 81, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(10), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(4), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(1), np.int64(3), np.int64(1)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 81, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 82, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(10), np.int64(4), np.int64(5)), Energy=99.0
+Robot 1: Position=(np.int64(1), np.int64(11), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(5), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 82, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(12), np.int64(12)), Energy=74.0
+Resources: 8, Obstacles: 15
+
+Episode 82, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 83, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(5), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(3), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(10), np.int64(6)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 83, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Resources: 8, Obstacles: 15
+
+Episode 83, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 84, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(2), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(1), np.int64(8), np.int64(1)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(2), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 84, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 85, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(10), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(5), np.int64(7), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(4), np.int64(2), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 85, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=74.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 85, Step 100
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 86, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(7), np.int64(4), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(13), np.int64(10), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(11), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 86, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(12), np.int64(14), np.int64(14)), Energy=74.0
+Resources: 8, Obstacles: 15
+
+Episode 86, Step 100
+--------------------------------------------------------------------------------
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=24.0
+Resources: 8, Obstacles: 15
+
+Episode 87, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(8), np.int64(0), np.int64(2)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(10), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(3), np.int64(3)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 87, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 88, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(8), np.int64(1), np.int64(13)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(7), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(3), np.int64(5), np.int64(8)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 88, Step 50
+--------------------------------------------------------------------------------
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(13), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 89, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(4), np.int64(4)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(14), np.int64(3)), Energy=99.0
+Robot 2: Position=(np.int64(9), np.int64(5), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 89, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 90/100
+  Average Reward: -18.78
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-22.12, Resources=0.0
+  Robot 1: Reward=-19.12, Resources=0.1
+  Robot 2: Reward=-19.66, Resources=0.1
+
+Recent Performance (last 10 episodes):
+  Average Reward: -18.30
+  Average Length: 100.4
+
+Episode 90, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(12), np.int64(8), np.int64(9)), Energy=99.0
+Robot 1: Position=(np.int64(10), np.int64(12), np.int64(4)), Energy=99.0
+Robot 2: Position=(np.int64(10), np.int64(10), np.int64(14)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 90, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 91, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(10), np.int64(2), np.int64(2)), Energy=99.0
+Robot 2: Position=(np.int64(8), np.int64(14), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 91, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 92, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(4), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(2), np.int64(12), np.int64(7)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(12), np.int64(9)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 92, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(12), np.int64(13), np.int64(12)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 93, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(9), np.int64(0), np.int64(12)), Energy=99.0
+Robot 1: Position=(np.int64(8), np.int64(14), np.int64(9)), Energy=99.0
+Robot 2: Position=(np.int64(12), np.int64(9), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 93, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 94, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(12), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(8), np.int64(8)), Energy=99.0
+Robot 2: Position=(np.int64(11), np.int64(4), np.int64(11)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 94, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(12), np.int64(13)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 95, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(4), np.int64(8), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(1), np.int64(6), np.int64(6)), Energy=99.0
+Robot 2: Position=(np.int64(7), np.int64(14), np.int64(4)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 95, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(13), np.int64(13), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 96, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(11), np.int64(14), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(9), np.int64(7), np.int64(5)), Energy=99.0
+Robot 2: Position=(np.int64(14), np.int64(2), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 96, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 97, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(8), np.int64(10), np.int64(14)), Energy=99.0
+Robot 1: Position=(np.int64(14), np.int64(11), np.int64(11)), Energy=99.0
+Robot 2: Position=(np.int64(5), np.int64(5), np.int64(13)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 97, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(13), np.int64(14), np.int64(13)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 98, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(3), np.int64(2), np.int64(3)), Energy=99.0
+Robot 1: Position=(np.int64(11), np.int64(1), np.int64(13)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(13), np.int64(12)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 98, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+
+Episode 99, Step 0
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(5), np.int64(11)), Energy=99.0
+Robot 1: Position=(np.int64(4), np.int64(4), np.int64(14)), Energy=99.0
+Robot 2: Position=(np.int64(6), np.int64(12), np.int64(10)), Energy=99.0
+Resources: 8, Obstacles: 15
+
+Episode 99, Step 50
+--------------------------------------------------------------------------------
+Robot 0: Position=(np.int64(0), np.int64(14), np.int64(14)), Energy=49.0
+Robot 1: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Robot 2: Position=(np.int64(14), np.int64(14), np.int64(14)), Energy=49.0
+Resources: 8, Obstacles: 15
+Episode 100/100
+  Average Reward: -18.63
+  Average Length: 100.0
+  Total Resources Collected: 0
+  Robot 0: Reward=-21.77, Resources=0.0
+  Robot 1: Reward=-19.89, Resources=0.1
+  Robot 2: Reward=-19.54, Resources=0.1
+
+Recent Performance (last 10 episodes):
+  Average Reward: -21.33
+  Average Length: 97.2
+
+Training completed in 169.87 seconds
+
+============================================================
+Final Statistics
+============================================================
+Group Statistics:
+  Average Reward per Agent: -20.40
+  Average Resources per Agent: 0.04
+  Average Survival Time: 98.2
+
+Communication Statistics:
+  Messages Sent: 0
+  Messages Received: 0
+  Cooperation Events: 0
+
+Individual Agent Statistics:
+  Robot 0:
+    Average Reward: -21.77
+    Resources Collected: 0.0
+    Survival Time: 96.7
+    Energy Efficiency: -0.5316
+  Robot 1:
+    Average Reward: -19.89
+    Resources Collected: 0.1
+    Survival Time: 98.8
+    Energy Efficiency: -0.2875
+  Robot 2:
+    Average Reward: -19.54
+    Resources Collected: 0.1
+    Survival Time: 99.2
+    Energy Efficiency: -0.3901
+
+Metrics saved to results_full.json
+
+Generating final plots...
+
+================================================================================
+Agent Comparison
+================================================================================
+
+Agent 0:
+  Average Reward: -21.77
+  Resources Collected: 0.0
+  Survival Time: 96.7
+  Energy Efficiency: -0.5316
+
+Agent 1:
+  Average Reward: -19.89
+  Resources Collected: 0.1
+  Survival Time: 98.8
+  Energy Efficiency: -0.2875
+
+Agent 2:
+  Average Reward: -19.54
+  Resources Collected: 0.1
+  Survival Time: 99.2
+  Energy Efficiency: -0.3901
+
+================================================================================
+Learning Curves
+================================================================================
+Agent 0: Recent Average Reward = -22.74
+Agent 1: Recent Average Reward = -21.50
+Agent 2: Recent Average Reward = -15.21
+Plots generated. Close the windows to exit.
+Press Enter to exit...Traceback (most recent call last):
+  File "/home/orv/Documents/Ai-Society/main.py", line 320, in <module>
+    main()
+    ~~~~^^
+  File "/home/orv/Documents/Ai-Society/main.py", line 311, in main
+    input("Press Enter to exit...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
